@@ -15,8 +15,6 @@ Large language models increasingly use chain-of-thought (CoT) prompting to show 
 
 *Thesis in progress. Full text will be added upon completion.*
 
-`theses/ma-warranted-trust-cot/`
-
 ---
 
 ### Quantifying Uncertainty in Latent Dirichlet Allocation
