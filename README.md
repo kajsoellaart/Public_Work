@@ -2,7 +2,7 @@
 
 Interdisciplinary researcher working across quantitative methods, machine learning, and philosophy of AI. Currently completing dual master's degrees in Econometrics (Data Science, Vrije Universiteit Amsterdam) and Philosophy (Philosophy of AI, University of Amsterdam).
 
-This repository collects my thesis work and selected writing on AI and society.
+This repository collects my thesis work, selected writing on AI and society, and code.
 
 ---
 
@@ -28,24 +28,6 @@ LDA is widely used to discover themes in large text collections, but its outputs
 
 ---
 
-### Unravelling Complexity: Linking Deep Neural Networks to Phenomena
-**BA Philosophy thesis | 2023**
-
-Can we use models to understand phenomena if we don't understand the models themselves? This thesis engages with Emily Sullivan's argument for "link uncertainty," which holds that the opacity of deep neural networks does not necessarily prevent them from providing scientific understanding. The thesis analyzes Sullivan's argument from both a technical and philosophical perspective, examining how concepts like opacity, explanation, and understanding apply to DNNs. It identifies limitations in Sullivan's use of simplified examples and proposes improvements to the concept of link uncertainty, including a revised definition of opacity and a more precise account of how models can be linked to the phenomena they represent.
-
-`theses/ba-dnns-scientific-explanation/`
-
----
-
-### Segmentation-Based Heatmaps for Post-Hoc Explainability in Computer Vision
-**BSc thesis | 2023**
-
-How can we explain what a convolutional neural network "sees" when it classifies an image? This thesis proposes segmentation-based heatmaps as a post-hoc explainability method. It introduces two architectures: Segmentation-based CNNs (SCNNs) and Frozen Segmentation-based CNNs (FSCNNs), which integrate a segmentation model with a CNN to produce heatmaps that highlight which input regions drive the model's decisions. The FSCNN achieves interpretability with only a small accuracy trade-off relative to the original CNN, while being roughly 400 times faster than standard pixel-level perturbation methods. The thesis also examines the epistemic limits of the approach, noting that using one black box (the segmenter) to explain another raises its own transparency questions.
-
-`theses/bsc-computer-vision/`
-
----
-
 ## Writing
 
 ### The Hidden Operations of AI: Data Annotation Labor, Extractivism, and the Politics of Invisibility
@@ -68,12 +50,32 @@ A public-facing piece on AI companionship and its risks, prompted by the case of
 
 ## Code
 
-### ML Competition Model
-**Machine Learning course, VU Amsterdam (Computer Science Department)**
+### Hotel Search Ranking (LightGBM LambdaMART)
+**Data Mining course, VU Amsterdam | Result: top 5 out of ~400 students (2025)**
 
-Model built for a competitive ML assignment, finishing in the top 5 out of 400 students. [Brief description of task and approach to be added.]
+Given a dataset of hotel search sessions from Expedia, the task was to predict the ranking of properties within each session to maximise NDCG@5. Each row represents one (search, property) impression; the targets are click and booking indicators. The model is a LightGBM LambdaMART ranker with a graded relevance target (booking = 5, click = 1, else 0). Feature engineering covers historical property-level aggregations, price normalisation, within-session ranking, star/review metrics, and competitor pricing comparisons (~140 features total). Hyperparameters were tuned via Bayesian search (Hyperopt TPE, 500 trials) and evaluated with 5-fold group cross-validation stratified by search ID.
 
 `projects/ml-competition-model/`
+
+---
+
+## Earlier Thesis Work
+
+### Unravelling Complexity: Linking Deep Neural Networks to Phenomena
+**BA Philosophy thesis | 2023**
+
+Can we use models to understand phenomena if we don't understand the models themselves? This thesis engages with Emily Sullivan's argument for "link uncertainty," which holds that the opacity of deep neural networks does not necessarily prevent them from providing scientific understanding. The thesis analyzes Sullivan's argument from both a technical and philosophical perspective, examining how concepts like opacity, explanation, and understanding apply to DNNs. It identifies limitations in Sullivan's use of simplified examples and proposes improvements to the concept of link uncertainty, including a revised definition of opacity and a more precise account of how models can be linked to the phenomena they represent.
+
+`theses/ba-dnns-scientific-explanation/`
+
+---
+
+### Segmentation-Based Heatmaps for Post-Hoc Explainability in Computer Vision
+**BSc thesis | 2023**
+
+How can we explain what a convolutional neural network "sees" when it classifies an image? This thesis proposes segmentation-based heatmaps as a post-hoc explainability method. It introduces two architectures: Segmentation-based CNNs (SCNNs) and Frozen Segmentation-based CNNs (FSCNNs), which integrate a segmentation model with a CNN to produce heatmaps that highlight which input regions drive the model's decisions. The FSCNN achieves interpretability with only a small accuracy trade-off relative to the original CNN, while being roughly 400 times faster than standard pixel-level perturbation methods. The thesis also examines the epistemic limits of the approach, noting that using one black box (the segmenter) to explain another raises its own transparency questions.
+
+`theses/bsc-computer-vision/`
 
 ---
 
