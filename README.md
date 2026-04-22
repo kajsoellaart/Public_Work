@@ -46,17 +46,6 @@ A public-facing piece on AI companionship and its risks, prompted by the case of
 
 ---
 
-## Code
-
-### Hotel Search Ranking (LightGBM LambdaMART)
-**Data Mining course, VU Amsterdam | Result: top 5 out of ~400 students (2025)**
-
-Given a dataset of hotel search sessions from Expedia, the task was to predict the ranking of properties within each session to maximise NDCG@5. Each row represents one (search, property) impression; the targets are click and booking indicators. The model is a LightGBM LambdaMART ranker with a graded relevance target (booking = 5, click = 1, else 0). Feature engineering covers historical property-level aggregations, price normalisation, within-session ranking, star/review metrics, and competitor pricing comparisons (~140 features total). Hyperparameters were tuned via Bayesian search (Hyperopt TPE, 500 trials) and evaluated with 5-fold group cross-validation stratified by search ID.
-
-`Coding Project`
-
----
-
 ## Earlier Thesis Work
 
 ### Unravelling Complexity: Linking Deep Neural Networks to Phenomena
